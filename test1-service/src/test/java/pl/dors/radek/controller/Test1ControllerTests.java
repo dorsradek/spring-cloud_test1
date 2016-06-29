@@ -1,4 +1,4 @@
-package pl.dors.radek;
+package pl.dors.radek.controller;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,6 +17,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.context.WebApplicationContext;
+import pl.dors.radek.Test1ServiceApplication;
+import pl.dors.radek.model.Person;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -74,7 +76,7 @@ public class Test1ControllerTests {
                 .andExpect(MockMvcResultMatchers.content().json(json(expectedResult)));
     }
 
-    protected String json(Object o) throws IOException {
+    private String json(Object o) throws IOException {
         MockHttpOutputMessage mockHttpOutputMessage = new MockHttpOutputMessage();
         this.mappingJackson2HttpMessageConverter.write(o, CONTENT_TYPE, mockHttpOutputMessage);
         return mockHttpOutputMessage.getBodyAsString();

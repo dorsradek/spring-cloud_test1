@@ -1,8 +1,9 @@
-package pl.dors.radek;
+package pl.dors.radek.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import pl.dors.radek.model.Person;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,7 +11,7 @@ import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/test1")
-class Test1Controller {
+public class Test1Controller {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Person> findAll() {

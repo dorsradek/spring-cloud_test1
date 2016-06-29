@@ -1,21 +1,28 @@
-package pl.dors.radek;
+package pl.dors.radek.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Created by rdors on 2016-06-29.
  */
-class Person {
+@Entity
+public class Person2 {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
 
-    Person() {
+    Person2() {
     }
 
-    public Person(String name) {
+    public Person2(String name) {
         this(null, name);
     }
 
-    public Person(Long id, String name) {
+    public Person2(Long id, String name) {
         this.id = id;
         this.name = name;
     }
