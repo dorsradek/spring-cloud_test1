@@ -17,6 +17,8 @@ import pl.dors.radek.TestCommons;
 import pl.dors.radek.model.Person2;
 import pl.dors.radek.repository.Person2Repository;
 
+import java.util.stream.Stream;
+
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -45,8 +47,7 @@ public class Test1Controller2Tests {
         Person2 p1 = new Person2("Stefan");
         Person2 p2 = new Person2("Marian");
         person2Repository.deleteAllInBatch();
-        person2Repository.save(p1);
-        person2Repository.save(p2);
+        Stream.of(p1, p2).forEach(person2Repository::save);
     }
 
     @Test
