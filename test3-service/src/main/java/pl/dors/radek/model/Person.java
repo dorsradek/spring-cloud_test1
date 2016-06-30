@@ -1,6 +1,6 @@
-package pl.dors.radek;
+package pl.dors.radek.model;
 
-class Person {
+public class Person {
 
     private Long id;
     private String name;

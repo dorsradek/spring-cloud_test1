@@ -1,8 +1,9 @@
-package pl.dors.radek;
+package pl.dors.radek.feign;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pl.dors.radek.model.Person;
 
 import java.util.List;
 
