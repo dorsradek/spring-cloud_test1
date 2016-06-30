@@ -64,9 +64,6 @@ public class Test3ControllerTests {
         mockPersonClientFeign();
         mockRestTemplate();
         mockDiscoveryClient();
-
-        ConfigurationManager.getConfigInstance()
-                .setProperty("hystrix.command.HystrixCommandKey.circuitBreaker.forceOpen", true);
     }
 
 
