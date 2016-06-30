@@ -1,6 +1,5 @@
 package pl.dors.radek.controller;
 
-import com.netflix.config.ConfigurationManager;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -65,7 +64,6 @@ public class Test3ControllerTests {
         mockRestTemplate();
         mockDiscoveryClient();
     }
-
 
     private void mockPersonClientFeign() {
         Person p1 = new Person(1L, "Stefan");
