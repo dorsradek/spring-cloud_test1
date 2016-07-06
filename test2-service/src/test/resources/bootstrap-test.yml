@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: test2-service-test
+server:
+  port: 8081
+eureka:
+  client:
+    enabled: false
