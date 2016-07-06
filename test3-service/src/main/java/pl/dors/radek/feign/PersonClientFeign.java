@@ -7,7 +7,7 @@ import pl.dors.radek.model.Person;
 
 import java.util.List;
 
-@FeignClient("Test1")
+@FeignClient("test1-service")
 public interface PersonClientFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "/test1")

@@ -1,8 +1,8 @@
 spring:
   application:
-    name: test1-service-test
+    name: test3-service-test
 server:
-  port: 8080
+  port: 8082
 eureka:
   client:
     enabled: false

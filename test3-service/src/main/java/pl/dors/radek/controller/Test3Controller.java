@@ -46,7 +46,7 @@ public class Test3Controller {
     public List<String> restTemplate() {
         ResponseEntity<List<Person>> exchange =
                 this.restTemplate.exchange(
-                        "http://Test1/test1",
+                        "http://test1-service/test1",
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<List<Person>>() {
