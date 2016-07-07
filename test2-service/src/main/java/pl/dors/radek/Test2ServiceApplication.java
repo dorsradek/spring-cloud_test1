@@ -20,39 +20,5 @@ public class Test2ServiceApplication {
     }
 }
 
-@RestController
-@RequestMapping("/test2")
-class Test2Controller {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Book> findAll() {
-        Book b1 = new Book(1L, "Book1");
-        Book b2 = new Book(2L, "Book2");
-        Book b3 = new Book(3L, "Book3");
-        Book b4 = new Book(4L, "Book4");
-        Book b5 = new Book(5L, "Book5");
-        return Stream.of(b1, b2, b3, b4, b5).collect(Collectors.toList());
-    }
-}
 
-class Book {
-
-    private Long id;
-    private String title;
-
-    Book() {
-    }
-
-    public Book(Long id, String title) {
-        this.id = id;
-        this.title = title;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-}
